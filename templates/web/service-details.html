@@ -1,0 +1,188 @@
+
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+
+
+
+
+    <div class="preloader">
+        <div class="preloader__image"></div>
+    </div>
+    <!-- /.preloader -->
+
+
+    <div class="page-wrapper">
+        
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(web/images/backgrounds/page-header-bg.jpg)">
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <h2>Coaching Details</h2>
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><span>-</span></li>
+                        <li class="active">Coaching Details</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <!--Coaching Details Start-->
+        <section class="coaching-details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="coaching-details__sidebar">
+                            <div class="coaching-details__services-list">
+                                <ul class="coaching-details__services list-unstyled">
+                                    <li>
+                                        <a href="#">Citizenship Test</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="#">IELTS Coaching</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">TOFEL Coaching</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">PTE Coaching</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">OET Coaching</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">SAT Coaching</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="banner-one">
+                                <div class="banner-one__shape-1">
+                                    <img src="{% static 'web/images/shapes/banner-one-shape-1.png'%}" alt="">
+                                </div>
+                                <div class="banner-one__bg"
+                                    style="background-image: url(web/images/backgrounds/banner-one-bg.jpg);"></div>
+                                <div class="banner-one__img">
+                                    <img src="{% static 'web/images/resources/banner-one-img.png'%}" alt="">
+                                </div>
+                                <h3 class="banner-one__title">100%
+                                    <br> Guarantee
+                                    <br> Approval</h3>
+                                <div class="banner-one__btn-box">
+                                    <a href="#" class="banner-one__btn">Apply Now</a>
+                                </div>
+                            </div>
+                            <div class="countries-details__documents">
+                                <div class="icon">
+                                    <span class="icon-pdf-file"></span>
+                                </div>
+                                <div class="content">
+                                    <h3><a href="#">IELTS Application Form</a></h3>
+                                    <p>3.9KB</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="coaching-details__right">
+                            <div class="coaching-details__img">
+                                <img src="{{object.background_image.url}}" alt="">
+                            </div>
+                            <h3 class="coaching-details__title-1">{{object.title}}</h3>
+                            <p class="coaching-details__text-1">{{object.description}}</p>
+                            
+                            {% for i in object.get_images %}
+                            <hr>
+                            <div class="coaching-details__img">
+                            <img src="{{i.image.url}}" alt="">
+                            </div>
+                            <p>{{i.service_description|safe}}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Coaching Details End-->
+
+        <!--Site Footer Start-->
+        
+        <!--Site Footer End-->
+
+
+    </div><!-- /.page-wrapper -->
+
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image"><img src="{% static 'web/images/resources/logo-2.png'%}" width="135"
+                        alt="" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:needhelp@packageName__.com">needhelp@treck.com</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:666-888-0000">666 888 0000</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="#" class="fab fa-pinterest-p"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+
+
+
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <!-- /.search-popup__overlay -->
+        <div class="search-popup__content">
+            <form action="#">
+                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="thm-btn">
+                    <i class="icon-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        <!-- /.search-popup__content -->
+    </div>
+    <!-- /.search-popup -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-right-arrow"></i></a>
+
+
+{% endblock %}
