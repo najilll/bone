@@ -7,6 +7,12 @@
     height: 280px;
     object-fit: cover;
 }
+.testimonial-three__counter-single:before{
+    background-image: -webkit-linear-gradient(180deg, rgb(255, 254, 254) 0%, rgb(45, 50, 144) 100%);
+}
+.testimonial-three__counter-single:after{
+    background-image: -webkit-linear-gradient(180deg, rgb(255, 254, 254) 0%, rgb(45, 50, 144) 100%);
+}
 
 @media (max-width: 500px) {
     .benefits-one__img-one img {
@@ -29,10 +35,5 @@
         font-size: 27px;
         line-height: 40px;
     }
-    .testimonial-three__counter-single:before{
-        background-image: -webkit-linear-gradient(180deg, rgb(255, 254, 254) 0%, rgb(45, 50, 144) 100%);
-    }
-    .testimonial-three__counter-single:after{
-        background-image: -webkit-linear-gradient(180deg, rgb(255, 254, 254) 0%, rgb(45, 50, 144) 100%);
-    }
+
 }
