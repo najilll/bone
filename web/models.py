@@ -17,13 +17,13 @@ class Services(models.Model):
     title = models.CharField(max_length=250)
     slug = models.SlugField()
     description=models.TextField()
-    background_image = models.ImageField(upload_to="baner")
+    image = models.ImageField(upload_to="baner")
     is_active = models.BooleanField(default=True)
     
     def __str__(self):
         return self.title  
     
-    def get_images(self):
+    def get_items(self):
         return ServiceDescription.objects.filter(services=self)
 
 class ServiceDescription(models.Model):
@@ -38,6 +38,10 @@ class ClientLogos(models.Model):
 
     def __str__(self):
         return self.logo.name
+    
+    class Meta:
+        verbose_name_plural = "Client Logos"
+        verbose_name = "Client Logo"
     
 
 class Blog(models.Model):

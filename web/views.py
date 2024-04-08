@@ -14,6 +14,10 @@ class IndexView(TemplateView):
         context['blog'] = Blog.objects.filter(is_active=True)
         context['testimonial'] = Testimonial.objects.filter(is_active=True)
         return context
+    
+    
+class AboutView(TemplateView):
+    template_name = "web/about.html"
 
 def contact(request):
     return render(request,'web/contact.html')

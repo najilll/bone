@@ -8,13 +8,13 @@ class BanerAdmin(ImportExportActionModelAdmin):
     list_display = ("title","background_image","is_active",)
     search_fields = ("title",)
 
-class ServiceDescriptionInline(admin.TabularInline):
+class ServiceDescriptionInline(admin.StackedInline):
     model = ServiceDescription
     extra = 1
 
 @admin.register(Services)
 class ServicesAdmin(ImportExportActionModelAdmin):
-    list_display = ("title","description", "background_image","is_active",)
+    list_display = ("title","is_active",)
     search_fields = ("title",)
     prepopulated_fields = {"slug": ("title",)}
     inlines = [ServiceDescriptionInline]
@@ -31,12 +31,12 @@ class BlogDescriptionInline(admin.TabularInline):
 
 @admin.register(Blog)
 class BlogAdmin(ImportExportActionModelAdmin):
-    list_display = ("title","description", "thumbnail_img","is_active",)
+    list_display = ("title","is_active",)
     search_fields = ("title",)
     prepopulated_fields = {"slug": ("title",)}
     inlines = [BlogDescriptionInline]
 
 @admin.register(Testimonial)
 class TestimonialAdmin(ImportExportActionModelAdmin):
-    list_display = ("name","profile_image","is_active",)
+    list_display = ("name","is_active",)
     search_fields = ("name",)

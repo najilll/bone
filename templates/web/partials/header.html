@@ -4,7 +4,7 @@
         <div class="main-menu-three__wrapper">
             <div class="main-menu-three__wrapper-inner">
                 <div class="main-menu-three__logo">
-                    <a href="index.html"><img src="{% static 'web/images/resources/logo-1.png'%}" alt=""></a>
+                    <a href="index.html"><img src="{% static 'web/images/logo.png'%}" alt=""></a>
                 </div>
                 <div class="main-menu-three__top">
                     <div class="main-menu-three__top-inner">
@@ -54,24 +54,23 @@
                             <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                             <ul class="main-menu__list">
                                 <li class="dropdown current megamenu">
-                                    <a href="index.html">Home </a>
+                                    <a href="/">Home </a>
                                     <ul>
                                         
                                     </ul>
                                 </li>
-                                <li class="dropdown">
-                                    <a href="#">Company</a>
-                                    
+                                <li >
+                                    <a href="{% url "about" %}">About</a>
                                 </li>
                                 <li class="dropdown">
                                     <a href="#">Corporate Services</a>
                                     
-                                    <ul class="sub-menu">
+                                    <!-- <ul class="sub-menu">
                                         <li><a href="products.html">Products</a></li>
                                         <li><a href="product-details.html">Product Details</a></li>
                                         <li><a href="cart.html">Cart</a></li>
                                         <li><a href="checkout.html">Checkout</a></li>
-                                    </ul>
+                                    </ul> -->
                                     
                                     
                                 </li>
@@ -100,7 +99,7 @@
                             
                             
                             <div class="main-menu-three__btn">
-                                <a href="contact.html">Book Appointment</a>
+                                <a href="#">Book Appointment</a>
                             </div>
                         </div>
                     </div>
@@ -114,3 +113,7 @@
 
 
 
+<div class="stricky-header stricked-menu main-menu">
+    <div class="sticky-header__content"></div>
+</div>
+<!-- /.stricky-header -->
